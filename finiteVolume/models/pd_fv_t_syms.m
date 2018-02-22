@@ -33,8 +33,6 @@ grid0 = 29;
 [v_end_b1,~] = cspline_00(vb1(end-grid0),dvb1dgrid(end-grid0),grid(end-grid0),grid(end-1),grid(end-grid0:end-1));
 vb1(end-grid0:end) = [v_end_b1,zeros(1,1)];
 
-%ab1 = simpleSplineSym((0:0.125:1)',log([a1;a2;a3;a4;a5;a6;a7;a8;a9]),grid_x);
-
 %% CONSTANTS ( for these no sensitivities will be computed )
 % this part is optional and can be ommited
 
@@ -46,15 +44,16 @@ k = sym('k',[n_grid-1,1]);
 % create symbolic variable for time
 syms t
 
-t_spline = [0, 7.6875, 15.375, 23.0625, 30.75, 38.4375, 46.125, 53.8125, 61.5];
+% time vector
+% t_spline = [0, 7.6875, 15.375, 23.0625, 30.75, 38.4375, 46.125, 53.8125, 61.5];
+
+% growth rate spline in time
 ab = log(am_spline_pos(t,9,0,a1,7.6875,a2,15.375,a3,23.0625,...
     a4,30.75,a5,38.4375,a6,46.125,a7,53.8125,a8,61.5,a9,0,0.0));
 
 xdot = sym(zeros(size(x)));
 % xdot is finite difference approximation to PDE on grid
-% boundary x(0) = 0;
 
-% dynamic branch 1
 xdot(1) = h2inv*(-Db1(1)*(x(1)-x(2))) - vb1(1)*1/2*(x(1)+x(2))*sqrt(h2inv) + ab*x(1);
 
 xdot(n_grid-1) = h2inv*(Db1(end)*(x(n_grid-2)-x(n_grid-1)))+vb1(end)*1/2*(x(n_grid-2)+x(n_grid-1))*sqrt(h2inv) + ab*x(n_grid-1);% 
