@@ -68,7 +68,7 @@ for it = 1:length(D.pop.t)
     end
     % area statistic
     D.dist.mean(it) = mean(D.areat{it});
-    D.dist.var(it) = var(D.areat{it});%/length(ind_r);
+    D.dist.var(it) = var(D.areat{it})/length(ind_r);
 end
 
 % save data
