@@ -8,6 +8,6 @@
 3. re-format scanpy output to conform with pseudodynamics requirements createPseudodynamicsInput_Klein15.R 
 
 ## Pseudodynamics
-1. pd_fv_wrap for /pseudodynamics/finiteVolume/models/pd_fv_Klein_syms.m
-2. evaluate mK_fun(n) for n = 1:320
+1. compile /pseudodynamics/finiteVolume/models/pd_fv_Klein_syms.m with pd_fv_wrap
+2. run mK_fun(n) for n = 1:320
 3. analyzeServerResultsKlein.m
