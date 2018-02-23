@@ -7,8 +7,8 @@ clear; close all; clc
 
 % compile the model
 tic;
-amiwrap('pd_branching_fv','pd_branching_fv_syms',exdir)
+amiwrap('pd_fv','pd_fv_syms',exdir)
 t_wrap = toc
 
 % add the model to the path
-addpath(genpath([strrep(which('amiwrap.m'),'amiwrap.m','') 'models/pd_branching_fv_syms']))
+addpath(genpath([strrep(which('amiwrap.m'),'amiwrap.m','') 'models/pd_fv_syms']))
