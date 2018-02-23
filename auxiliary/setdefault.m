@@ -1,10 +1,17 @@
-% setdefault sets the not defined fields of the 
-%    structure object to the default values specified
-%    in the structure defaultobject.
+function object = setdefault(object, defaultobject)
+% setdefault sets the not defined fields of the structure object to the 
+% default values specified in the structure default object.
 %
-% [object] = setdefault(object,defaultobject)
-
-function object = setdefault(object,defaultobject)
+% Usage:
+% [object] = setdefault(object, defaultobject)
+%
+% Parameters:
+% object: The object on which default values are to be set
+% defaultobject: Structure with default values
+%
+% Return values:
+% object: The object with the original settings and default values for
+% unset options
 
 % Checks whether input object is empty
 if isempty(object)
