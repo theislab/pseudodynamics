@@ -52,7 +52,7 @@ ab = log(am_spline_pos(t,9,0,a1,7.6875,a2,15.375,a3,23.0625,...
     a4,30.75,a5,38.4375,a6,46.125,a7,53.8125,a8,61.5,a9,0,0.0));
 
 xdot = sym(zeros(size(x)));
-% xdot is finite difference approximation to PDE on grid
+% xdot is finite volume approximation to PDE on grid
 
 xdot(1) = h2inv*(-Db1(1)*(x(1)-x(2))) - vb1(1)*1/2*(x(1)+x(2))*sqrt(h2inv) + ab*x(1);
 
