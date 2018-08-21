@@ -83,7 +83,7 @@ end
 sigma2 = sum(I)/length(indI(2:end));
 dsigma2dtheta = sum(dIdtheta,1)/length(indI(2:end));
 
-% evaluate negatie log-likelihood for least-squares ansatz
+% evaluate negative log-likelihood for least-squares ansatz
 for it = 1:length(indI)-1
     lS = lS + 0.5*log(2*pi*sigma2) + 1;
     grad = grad + 0.5*(1/sigma2*dsigma2dtheta)';
