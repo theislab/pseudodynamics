@@ -53,6 +53,7 @@ ab = log(am_spline_pos(t,9,0,a1,7.6875,a2,15.375,a3,23.0625,...
 
 xdot = sym(zeros(size(x)));
 % xdot is finite volume approximation to PDE on grid
+% Robin boundary on the left hand side and Dirichlet on the right hand side
 
 xdot(1) = h2inv*(-Db1(1)*(x(1)-x(2))) - vb1(1)*1/2*(x(1)+x(2))*sqrt(h2inv) + ab*x(1);
 
