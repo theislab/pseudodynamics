@@ -46,7 +46,7 @@ k = sym('k',[n_grid1+n_grid2-2,1]);
 syms t
 
 xdot = sym(zeros(size(x)));
-% xdot is finite difference approximation to PDE on grid
+% xdot is finite volume approximation to PDE on grid
 % boundary x(0) = 0;
 
 % dynamic for main branch
