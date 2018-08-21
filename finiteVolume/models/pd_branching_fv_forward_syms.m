@@ -47,7 +47,7 @@ syms t
 
 xdot = sym(zeros(size(x)));
 % xdot is finite volume approximation to PDE on grid
-% boundary x(0) = 0;
+% Robin boundary on the left hand side and Dirichlet on the right hand side
 
 % dynamic for main branch
 xdot(1) = h2inv*(-D(1)*(x(1)-x(2))) - v(1)*1/2*(x(1)+x(2))*sqrt(h2inv) + a(1)*x(1);
