@@ -1,6 +1,6 @@
 function [model] = splineHelp_syms( )
 % simulation file for the evaluation of the spline for the growth rate 
-% at different timepoints 
+% at different time points 
 
 model.param = 'log';
 model.forward = true;
