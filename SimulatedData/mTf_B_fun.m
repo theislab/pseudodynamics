@@ -85,7 +85,7 @@ for it = 2:length(D.pop.t)
 end
                              
 % Log-likelihood function
-objectiveFunction = @(theta) llPseudodynamicsFvMaehrMonocleKS(theta,modelfun,D,options);
+objectiveFunction = @(theta) llPseudodynamicsFvKS(theta,modelfun,D,options);
 
 %% Multi-start local optimization
 % A multi-start local optimization is performed within the bounds defined in
