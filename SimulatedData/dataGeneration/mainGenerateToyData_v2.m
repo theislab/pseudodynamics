@@ -33,5 +33,5 @@ parameters.true = [-7; -7; -7; -7; -7; -7; -7; -7; -8;... % D
     -4; -2; -2; -2; -3; -4; -4; -6; -7;... % v
     2.5;0.5;0.5;0.5;1.5;1;2;0;0]; % a
 
-options.name = 'dataToy_B';
+options.name = 'dataB';
 generateToyData_v2(parameters.true,@simulate_pd_fv,D,options)
