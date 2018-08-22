@@ -36,6 +36,10 @@ options_sim.maxsteps = 1e6;
 options_sim.sx0 = zeros(n_grid-1,length(theta));
 % simulation
 [status,t_sim,~,u,~,us] = modelFun(D.pop.t,theta,u0,[],options_sim);
+% check if simulation failed
+if status ~= 0
+    error('AMICI simulation failed')
+end
 
 % variable assignment
 N = u(:,end);
