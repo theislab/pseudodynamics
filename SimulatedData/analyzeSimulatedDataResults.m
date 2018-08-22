@@ -16,14 +16,10 @@ for i=1:3
 end
 
 %% CI local approximation
+load('parameterProfilesQuasiSteady')
 
-load('resultsQuasiSteady_mS4')
-
-optionsCI.mode = 'text';
 alpha = [0.9,0.95,0.99];
-for i=1:3
-    Est{i}.parameters = getParameterConfidenceIntervals(Est{i}.parameters, alpha, optionsCI);
-end
+parameters = getParameterConfidenceIntervals(parameters, alpha);
 %%
 clear
 
@@ -42,10 +38,7 @@ for i=1:3
     par{i} = plotParameters(Est{i}.parameters.MS.par(:,1));
 end
 %% CI local approximation
-load('resultsAttractor')
+load('parameterProfilesAttractor')
 
 alpha = [0.9,0.95,0.99];
-optionsCI.mode = 'text';
-for i=1:3
-    Est{i}.parameters = getParameterConfidenceIntervals(Est{i}.parameters, alpha, optionsCI);
-end
+parameters = getParameterConfidenceIntervals(parameters, alpha);
