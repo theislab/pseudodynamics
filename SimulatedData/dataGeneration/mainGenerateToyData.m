@@ -30,7 +30,7 @@ parA = 1.2;
 parameters.true = [parD*ones(9,1);-2;-2;-2;-2;-2;-4;-4;-10;-10;parA*ones(9,1)];
 
 options.name = 'dataAttractor';
-generateToyData(parameters.true,@simulate_pd_fv,D,options)
+generateToyData_v1(parameters.true,@simulate_pd_fv,D,options)
 
 % quasi steady state
 parD = -7;
@@ -39,7 +39,7 @@ parV = -2;
 parameters.true = [parD*ones(9,1);parV*ones(9,1);1;1;1;1.4;3.0;-0.8;-5;-5.5;-5.5];
 
 options.name = 'dataQuasiSteady';
-generateToyData(parameters.true,@simulate_pd_fv,D,options)
+generateToyData_v1(parameters.true,@simulate_pd_fv,D,options)
 
 % forward simulation
 % population size variance
@@ -50,4 +50,4 @@ parameters.true = [-7; -8; -9; -8; -7; -7; -7; -6; -6;...
     1;1;0.8;0.7;0.6;0.5;0.4;0.3;0.2];
 
 options.name = 'dataToy';
-generateToyData(parameters.true,@simulate_pd_fv,D,options)
+generateToyData_v1(parameters.true,@simulate_pd_fv,D,options)
