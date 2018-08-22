@@ -34,10 +34,8 @@ for i=1:3
     legend('estimated')
 end
 
-%% CI local approximation
-load('resultsExample')
+%% CI approximation using profile likelihoods
+load('parameterProfilesExample')
 
 alpha = [0.9,0.95,0.99];
-for i=1:3
-    Est{i}.parameters = getParameterConfidenceIntervals(Est{i}.parameters, alpha);
-end
+parameters = getParameterConfidenceIntervals(parameters, alpha);
