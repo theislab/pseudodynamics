@@ -35,7 +35,7 @@ for i=1:3
 end
 
 %% CI approximation using profile likelihoods
-load('parameterProfilesExample')
+load('./results/parameterProfilesExample')
 
 alpha = [0.9,0.95,0.99];
 parameters = getParameterConfidenceIntervals(parameters, alpha);
