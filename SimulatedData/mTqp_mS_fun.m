@@ -9,13 +9,13 @@ x = linspace(0,1,n_grid);
 
 %% Data
 
-load dataQuasiSteady10000_4
+load dataQuasiSteady10000
 clear options.u0
 clear sol
-load parametersQuasiSteady_mS4
+load parametersQuasiSteady
 clear parameters
 clear optionsMultistarts
-load resultsQuasiSteady_mS4
+load resultsQuasiSteady
 
 parameters = Est{1}.parameters;
 
