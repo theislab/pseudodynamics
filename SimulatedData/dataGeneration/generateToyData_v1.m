@@ -1,4 +1,4 @@
-function [] = generateToyData(varargin)
+function [] = generateToyData_v1(varargin)
 % set model specifications
 n_grid = 300;
 x = linspace(0,1,n_grid);
