@@ -29,13 +29,20 @@ Please also refer to our Supp. methods Sec. 8 for details on all of these case s
 3. Run multi-start optimzation (likelihood profile computation) mTqp_fun('n') for n=...
 
 ### Sampling bias (D)
+### Data simulated with bias and without correction (D1)
 1. Compile /pseudodynamics/finiteVolume/models/pd_fv_syms.m using pd_fv_wrap
-2. a) Run multi-start optimzation (parameter estimation) data simulated with bias and without correction mT_wB_fun('n') for n=... (E1)
-2. b) Run multi-start optimzation (parameter estimation)for data simulated without bias and without correction mT_woB_fun('n') for n=... (E2)
-2. c) Run multi-start optimzation (parameter estimation)for data simulated with bias and with correction mT_woB_fun('n') for n=... (E3)
-3. a) Run multi-start optimzation (likelihood profile computation) for data simulated with bias and without correction mTp_wB_fun('n') for n=... (E1)
-3. b) Run multi-start optimzation (likelihood profile computation)for data simulated without bias and without correction mTp_woB_fun('n') for n=... (E2)
-3. c) Run multi-start optimzation (likelihood profile computation) for data simulated with bias and with correction mTp_woB_fun('n') for n=... (E3)
+2. Run multi-start optimzation (parameter estimation) mT_wB_fun('n') for n=... 
+3. Run multi-start optimzation (likelihood profile computation) for data simulated with bias and without correction mTp_wB_fun('n') for n=... 
+
+### Data simulated without bias and without correction (D2)
+1. Compile /pseudodynamics/finiteVolume/models/pd_fv_syms.m using pd_fv_wrap
+2. Run multi-start optimzation (parameter estimation)  mT_woB_fun('n') for n=... 
+3. b) Run multi-start optimzation (likelihood profile computation) mTp_woB_fun('n') for n=...
+
+### Data simulated with bias and with correction (D3)
+1. Compile /pseudodynamics/finiteVolume/models/pd_fv_syms.m using pd_fv_wrap
+2. Run multi-start optimzation (parameter estimation) n mT_woB_fun('n') for n=...
+3. c) Run multi-start optimzation (likelihood profile computation) mTp_woB_fun('n') for n=...
 
 ### Forward simulation of branched model (E)
 1. Compile /pseudodynamics/finiteVolume/models/pd_fv_syms.m using pd_fv_wrap
