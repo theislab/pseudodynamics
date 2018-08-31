@@ -7,14 +7,14 @@ Please refer to the files in our manuscript for details on the computation of ce
 1. extractDataQiu_ODE.m
 
 ## Compartment model
-### Constant rates
+### Constant rates (A)
 1. Compile model pseudodynamics/compartmentODE/models/compartment_syms.m using compartment_wrap.m
 2. Run multi-start optimization mQc_script.m
 
-### Constant transition and time-dependent growth rates
+### Constant transition and time-dependent growth rates (B)
 1. Compile model pseudodynamics/compartmentODE/models/compartment_t_syms.m using compartment_wrap.m
 2. Run multi-start optimization mQct_script.m
 
-### Time-dependent rates
+### Time-dependent rates (C)
 1. Compile model pseudodynamics/compartmentODE/models/compartment_t4_syms.m using compartment_wrap.m
 2. Run multi-start optimization mQct4_script.m
